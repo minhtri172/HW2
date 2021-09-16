@@ -1,0 +1,136 @@
+/*
+    File: pacific.css
+    GUI Assigment: Style a Site with External CSS
+    Minh Le, Umass Lowell Computer Science, minhtri_le@student.uml.edu
+    Copyright (C) 2021 by Minh Le. 
+    Updated by ML on September 15, 2021 at 8:00pm
+    Adding style to the website 
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+/* Display background image of the body and setup font and color of text */
+body {
+	background-image: url("ptrbackground.jpg");
+	background-color: #00569f;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+	Display content in the center of the page and minimum the width with 600px 
+	Display the wrapper as Grid (1 fraction : 2 fraction for columns)
+*/
+#wrapper {
+	/*background-color: #90c8e3;*/
+	width: 80%;
+	min-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr 7fr;
+}
+
+/* Display header full width of wrapper */
+header {
+	grid-column: 1 / 3;
+}
+
+/* Nav bar on the left with fixed width 200px */
+nav {
+	height: 100%;
+	background-color: #90c8e3;
+	width: 200px;
+	grid-row: 2 / 4;
+}
+
+/* remove bullets, underlines */
+nav ul {
+	font-size: 1.2em;
+	list-style-type: none;
+	font-weight: 900;
+	padding-left: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: black;
+	text-align: left;
+}
+
+nav a:visited {
+	color: #344873;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+}
+
+#content {
+	padding-left: 32px;
+	background-color: white;
+}
+
+/* setup color for sentence "Pacific Trails Resort" inside class="resort" */
+#content .resort {
+	color:	#56849c;
+	font-weight: 900;
+}
+
+/* Fix the content of tag p is too close the the right border when max-screen */
+#content p {
+	padding-right: 1em;
+}
+
+/* Display image on the left of the text*/
+#content img {
+	float: left;
+	margin-right: 30px;
+}
+
+/* change the bullet points to image */
+#content ul {
+	list-style-position: inside;
+	list-style-image: url("marker.gif");
+}
+
+/* Display the banner image to the right. Empty left background will be set with color #010036 */
+h1 {
+	color: white;
+	margin-bottom: 0;
+	padding: 10px;
+	background-color: #010036;
+	background-image: url("sunset.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+h2 {
+	color: #3399CC;
+}
+
+h1, h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#contact {
+	font-size: 90%;
+	margin-right: 10px;
+}
+
+dt {
+	color: #000033;
+}
+
+/* Display footer on column 2 of the grid */
+footer {
+	grid-column: 2;
+	padding-left: 30px;
+	padding-top: 80px;
+	padding-bottom: 20px;
+	background-color: white;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
